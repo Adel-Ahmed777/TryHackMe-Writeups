@@ -87,12 +87,15 @@ use the found credentials to connect through ssh
 ```
 ssh falconfeast@10.10.139.218
 ```
+
 use the following two commands to view the user flag
+
 ```
 ls
 cat user.txt
+```
 
-1. User Flag
+### User Flag
 
 <details><summary>CLICK TO REVEAL</summary>
 <p>
@@ -103,9 +106,6 @@ cat user.txt
 
 </p>
 </details>
-
-```
-
 
 ### Escalate to root privileges
 Let's check what privileges the current user has through the following command:
@@ -138,7 +138,14 @@ cd root
 ls
 ```
 
-2. Root Flag
+### Root Flag
+
+<details><summary>CLICK TO REVEAL</summary>
+<p>
+
 ```
 42964104845495153909
 ```
+
+</p>
+</details>
