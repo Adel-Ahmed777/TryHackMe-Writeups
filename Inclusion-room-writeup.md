@@ -91,11 +91,21 @@ use the following two commands to view the user flag
 ```
 ls
 cat user.txt
-```
+
 1. User Flag
+
+<details><summary>CLICK TO REVEAL</summary>
+<p>
+
 ```
 60989655118397345799
 ```
+
+</p>
+</details>
+
+```
+
 
 ### Escalate to root privileges
 Let's check what privileges the current user has through the following command:
