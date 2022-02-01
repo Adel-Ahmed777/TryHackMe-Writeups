@@ -1,6 +1,5 @@
 # Django CTF
-![](https://raw.githubusercontent.com/Adel-Ahmed777/TryHackMe-Writeups/main/Django%20CTF-image.png)
-
+![](https://raw.githubusercontent.com/Adel-Ahmed777/TryHackMe-Writeups/main/TryHackMe%20Images/Django%20CTF-image.png)
 ## Unit-5 CTF.
 
 ### Information to start with:
