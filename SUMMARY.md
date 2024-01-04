@@ -5,4 +5,3 @@
 * [Net Sec Challenge](<Net Sec Challenge.md>)
 * [TryHackMe-Writeups](<README (1).md>)
 * [TryHackMe Images](<TryHackMe Images/readme.md>)
-* [Testing Git book](testing-git-book.md)
