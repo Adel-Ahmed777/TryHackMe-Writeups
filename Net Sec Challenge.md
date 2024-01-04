@@ -1,18 +1,24 @@
 # Net Sec Challenge
+
+## Net Sec Challenge
+
 ![](https://raw.githubusercontent.com/Adel-Ahmed777/TryHackMe-Writeups/main/TryHackMe%20Images/Net%20Sec%20Challenge%20Screenshot.png)
 
-# Task 2
+## Task 2
 
-### First I ran the following nmap scan
+#### First I ran the following nmap scan
+
 ```
 nmap -sC -sV -Pn -p- -vv 10.10.65.131
 ```
-- -sC = use the default script
-- -sV = Enable version detection
-- -Pn = Treat all hosts as online and skip host discovery
-- -p- = Scan all ports
+
+* \-sC = use the default script
+* \-sV = Enable version detection
+* \-Pn = Treat all hosts as online and skip host discovery
+* \-p- = Scan all ports
 
 Results:
+
 ```
 Not shown: 65527 closed tcp ports (conn-refused)
 PORT      STATE    SERVICE     REASON      VERSION
@@ -89,47 +95,50 @@ Nmap done: 1 IP address (1 host up) scanned in 9467.12 seconds
 
 ```
 
-###  What is the highest port number being open less than 10,000?
+#### What is the highest port number being open less than 10,000?
+
 According to this part of the scan:
+
 ```
 8080/tcp  open     http        syn-ack     Node.js (Express middleware)
 ```
-#### Answer
+
+**Answer**
+
 <details>
-<summary>
-CLICK TO REVEAL
-</summary>
-<p>
+
+<summary>CLICK TO REVEAL</summary>
 
 ```
 8080
 ```
-</p>
+
 </details>
 
+#### There is an open port outside the common 1000 ports; it is above 10,000. What is it?
 
-### There is an open port outside the common 1000 ports; it is above 10,000. What is it?
 According to this part of the scan:
+
 ```
 10021/tcp open     ftp         syn-ack     vsftpd 3.0.3
 ```
-#### Answer
+
+**Answer**
+
 <details>
-<summary>
-CLICK TO REVEAL
-</summary>
-<p>
+
+<summary>CLICK TO REVEAL</summary>
 
 ```
 10021
 ```
 
-</p>
 </details>
 
+#### How many TCP ports are open?
 
-### How many TCP ports are open?
 These are the number of open TCP ports
+
 ```
 22/tcp    open     ssh         syn-ack     (protocol 2.0)
 80/tcp    open     http        syn-ack     lighttpd
@@ -138,22 +147,23 @@ These are the number of open TCP ports
 8080/tcp  open     http        syn-ack     Node.js (Express middleware)
 10021/tcp open     ftp         syn-ack     vsftpd 3.0.3
 ```
-#### Answer
+
+**Answer**
+
 <details>
-<summary>
-CLICK TO REVEAL
-</summary>
-<p>
+
+<summary>CLICK TO REVEAL</summary>
 
 ```
 6
 ```
 
-</p>
 </details>
 
-### What is the flag hidden in the HTTP server header?
+#### What is the flag hidden in the HTTP server header?
+
 According to the HTTP section in the scan, the flag is
+
 ```
 80/tcp    open     http        syn-ack     lighttpd
 |_http-server-header: lighttpd THM{web_server_25352}
@@ -161,22 +171,23 @@ According to the HTTP section in the scan, the flag is
 |_  Supported Methods: OPTIONS GET HEAD POST
 |_http-title: Hello, world!
 ```
-#### Flag
+
+**Flag**
+
 <details>
-<summary>
-CLICK TO REVEAL
-</summary>
-<p>
+
+<summary>CLICK TO REVEAL</summary>
 
 ```
 THM{web_server_25352}
 ```
 
-</p>
 </details>
 
-### What is the flag hidden in the SSH server header?
-According to the SSH section in the scan [last line], the flag is
+#### What is the flag hidden in the SSH server header?
+
+According to the SSH section in the scan \[last line], the flag is
+
 ```
 22/tcp    open     ssh         syn-ack     (protocol 2.0)
 | ssh-hostkey:
@@ -190,61 +201,68 @@ According to the SSH section in the scan [last line], the flag is
 |   NULL:
 |_    SSH-2.0-OpenSSH_8.2p1 THM{946219583339}
 ```
-#### Flag
+
+**Flag**
+
 <details>
-<summary>
-CLICK TO REVEAL
-</summary>
-<p>
+
+<summary>CLICK TO REVEAL</summary>
 
 ```
 THM{946219583339}
 ```
 
-</p>
 </details>
 
-### We have an FTP server listening on a nonstandard port. What is the version of the FTP server?
+#### We have an FTP server listening on a nonstandard port. What is the version of the FTP server?
+
 According to this part of the scan:
+
 ```
 10021/tcp open     ftp         syn-ack     vsftpd 3.0.3
 ```
-#### Answer
+
+**Answer**
+
 <details>
-<summary>
-CLICK TO REVEAL
-</summary>
-<p>
+
+<summary>CLICK TO REVEAL</summary>
 
 ```
 vsftpd 3.0.3
 ```
 
-</p>
 </details>
 
-### We learned two usernames using social engineering: eddie and quinn. What is the flag hidden in one of these two account files and accessible via FTP?
+#### We learned two usernames using social engineering: eddie and quinn. What is the flag hidden in one of these two account files and accessible via FTP?
 
 On this machine FTP is running on port 10021. So, we will use Hydra and specify this port in the command for each username.
 
 For eddie:
+
 ```
 hydra -l eddie -P /usr/share/wordlists/rockyou.txt ftp://10.10.65.131:10021
 ```
+
 Login details for eddie:
+
 ```
 [10021][ftp] host: 10.10.65.131   login: eddie   password: jordan
 
 ```
 
 For quinn:
+
 ```
 hydra -l quinn -P /usr/share/wordlists/rockyou.txt ftp://10.10.65.131:10021
 ```
+
 Login details for quinn:
+
 ```
 [10021][ftp] host: 10.10.65.131   login: quinn   password: andrea
 ```
+
 Now we login to one of the users and check where is the hidden flag. I coudlnt find any thing on eddie's directory, so it must be on quinn's
 
 ```
@@ -273,23 +291,19 @@ ftp> exit
 221 Goodbye.
 ```
 
-#### Flag
+**Flag**
 
 <details>
-<summary>
-CLICK TO REVEAL
-</summary>
-<p>
+
+<summary>CLICK TO REVEAL</summary>
 
 ```
 THM{321452667098}
 ```
 
-</p>
 </details>
 
-
-### Browsing to http://10.10.209.253:8080 displays a small challenge that will give you a flag once you solve it. What is the flag?
+#### Browsing to http://10.10.209.253:8080 displays a small challenge that will give you a flag once you solve it. What is the flag?
 
 The IP in this question is different than the rest becasue I had to reset the machine.
 
@@ -297,21 +311,20 @@ I used the **-sN** flag as this performs a null scan that allows you scan the ma
 
 ```
 sudo nmap -sN  10.10.209.253      
-```  
+```
 
 ![](https://raw.githubusercontent.com/Adel-Ahmed777/TryHackMe-Writeups/main/TryHackMe%20Images/nullscan-results.png)
 
-#### Flag
+**Flag**
 
 <details>
-<summary>
-CLICK TO REVEAL
-</summary>
-<p>
+
+<summary>CLICK TO REVEAL</summary>
 
 ```
 THM{f7443f99}
 ```
 
-</p>
 </details>
+
+## testing Gitbook
