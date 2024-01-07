@@ -1,7 +1,7 @@
 # Table of contents
 
 * [Django CTF](README.md)
-* [Inclusion](Inclusion-room-writeup.md)
-* [Net Sec Challenge](<Net Sec Challenge.md>)
+* [Inclusion](inclusion-room-writeup.md)
+* [Net Sec Challenge](net-sec-challenge.md)
 * [TryHackMe-Writeups](tryhackme-writeups.md)
-* [TryHackMe Images](<TryHackMe Images/readme.md>)
+* [TryHackMe Images](tryhackme-images.md)
