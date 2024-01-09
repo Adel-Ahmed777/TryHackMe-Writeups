@@ -1,5 +1,3 @@
-# Django CTF
+# TryHackMe-Writeups
 
-> ssss
->
->
+This repo includes all TryHackMe writeups
