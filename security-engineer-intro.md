@@ -40,9 +40,61 @@ Change management
 
 
 
+**Task 5 Additional Roles and Responsibilities**
+
+* What is a theoretical exercise carried out to gauge the operational readiness of an organization from a security point of view?
+
+Tabletop Exercises
+
+* What is the priority of the management in case of a disaster or crisis?
+
+business continuity
 
 
 
+**Task 6 Walking in Their Shoes**
 
-\--- T0 be cont..
+* VAPT report #1&#x20;
+
+<figure><img src=".gitbook/assets/VAP report#1 - Security engineer path.png" alt=""><figcaption><p>VAPT report 1</p></figcaption></figure>
+
+Restrict accessibility of the server only through VPN or internal network
+
+
+
+<figure><img src=".gitbook/assets/VAPT report#2.png" alt=""><figcaption><p>VAPT report 2</p></figcaption></figure>
+
+Restrict accessibility of the server only through VPN or internal network
+
+
+
+<figure><img src=".gitbook/assets/VAP#3.png" alt=""><figcaption><p>VAPT report#3</p></figcaption></figure>
+
+Patch the vulnerability
+
+
+
+<figure><img src=".gitbook/assets/VAPT#4.png" alt=""><figcaption><p>VAPT report 4</p></figcaption></figure>
+
+Restrict accessibility of the servers to only required usage&#x20;
+
+
+
+<figure><img src=".gitbook/assets/VAPT report#5.png" alt=""><figcaption><p>VAPT report 5</p></figcaption></figure>
+
+Aggregate cloud logs in a single place.
+
+Forward the logs from the palce to on-prem network using a restricted tunnel.
+
+
+
+* What is the flag shown on the completion of the static site?
+
+<details>
+
+<summary>Click me</summary>
+
+THM{S3CUR1TY\_3NG1N33R5\_R0CK}
+
+</details>
 
