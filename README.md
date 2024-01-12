@@ -1,3 +1,3 @@
 # 📘 READ ME
 
-This repo is for all the room I completed on TryHackMe
+This repo is for all the rooms I have completed on TryHackMe
