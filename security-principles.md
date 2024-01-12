@@ -44,8 +44,6 @@ Integrity
 
 * What is the flag that you obtained at the end?
 
-
-
 <details>
 
 <summary>Click me</summary>
@@ -56,6 +54,55 @@ THM{CIA\_TRIAD}
 
 
 
+**Task 3 DAD**
 
 
-\--- To be continued
+
+* The attacker managed to gain access to customer records and dumped them online. What is this attack?
+
+disclosure&#x20;
+
+
+
+* A group of attackers were able to locate both the main and the backup power supply systems and switch them off. As a result, the whole network was shut down. What is this attack?
+
+destruction/denial
+
+
+
+**Task 4 Fundamental Concepts of Security Models**
+
+
+
+* Q1 Which model dictates “no read down”?
+
+Biba
+
+* Q2 Which model states “no read up”?
+
+Bell-LaPadula Model
+
+* Q3 Which model teaches “no write down”?
+
+Bell-LaPadula Model
+
+* Q4 Which model forces “no write up”?
+
+Biba
+
+
+
+* What is the flag that you obtained at the end?
+
+<details>
+
+<summary>Click me</summary>
+
+THM{SECURITY\_MODELS}
+
+</details>
+
+
+
+**Task 6 ISO/IEC 19249**
+
