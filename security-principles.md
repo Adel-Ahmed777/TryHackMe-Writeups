@@ -106,3 +106,21 @@ THM{SECURITY\_MODELS}
 
 **Task 6 ISO/IEC 19249**
 
+
+
+* Which principle are you applying when you turn off an insecure server that is not critical to the business?
+
+2
+
+* Your company hired a new sales representative. Which principle are they applying when they tell you to give them access only to the company products and prices?
+
+1
+
+* While reading the code of an ATM, you noticed a huge chunk of code to handle unexpected situations such as network disconnection and power failure. Which principle are they applying?
+
+5
+
+
+
+
+
